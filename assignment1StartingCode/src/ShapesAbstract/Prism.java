@@ -29,8 +29,6 @@ public abstract class Prism {
 		this.height = height;
 		this.side = side;
 	}
-
-	
 	
 	
 }
