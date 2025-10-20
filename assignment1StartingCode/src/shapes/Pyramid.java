@@ -1,6 +1,8 @@
 package shapes;
 
-public class Pyramid
+import ShapesAbstract.Prism;
+
+public class Pyramid extends Prism
 {
 
 }

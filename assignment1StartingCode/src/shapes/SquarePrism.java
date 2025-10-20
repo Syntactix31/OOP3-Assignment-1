@@ -1,6 +1,8 @@
 package shapes;
 
-public class SquarePrism
+import ShapesAbstract.Prism;
+
+public class SquarePrism extends Prism
 {
 
 }

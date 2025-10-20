@@ -1,6 +1,8 @@
 package shapes;
 
-public class OctagonalPrism
+import ShapesAbstract.Prism;
+
+public class OctagonalPrism extends Prism
 {
 
 }
