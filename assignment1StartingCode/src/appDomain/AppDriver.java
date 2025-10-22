@@ -94,6 +94,29 @@ public class AppDriver
         stop = System.currentTimeMillis();
 		System.out.println( "Alotted time for Selection Sort was: " + ( stop - start ) + " milliseconds" );
 		System.out.println();
+		
+		//Merge Sort (Replace shapesM with parsed array from the file)
+		start = System.currentTimeMillis();
+
+		Shape[] shapesM = {
+		    new Cone(10, 3),
+		    new Cone(5, 5),
+		    new Cone(8, 4)
+		};
+
+		System.out.println("Original Array: ");
+		for (Shape s : shapesM) System.out.println(s);
+
+		// DESCENDING by base area (as an example)
+		utilities.MergeSort.sort(shapesM, new BaseAreaComparator().reversed());
+
+		System.out.println();
+		System.out.println("Sorted Array (DESC): ");
+		for (Shape s : shapesM) System.out.println(s);
+
+		stop = System.currentTimeMillis();
+		System.out.println("Alotted time for Merge Sort was: " + (stop - start) + " milliseconds");
+		System.out.println();
         
 		// refer to demo02 Student.java for comparable implementation, and
 		// NameCompare.java or GradeCompare for comparator implementations
