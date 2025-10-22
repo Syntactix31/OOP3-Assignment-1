@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ShapesAbstract;
+package shapesAbstract;
 
 /**
  * 
@@ -26,8 +26,15 @@ public abstract class Shape implements Comparable<Shape>{
 	@Override
 	public int compareTo(Shape that) {
 
-		return Double.compare(this.getHeight(), that.getHeight());
+		return Double.compare(that.getHeight(), this.getHeight());
 	}
 	
+	@Override
+    public String toString() {
+        return this.getClass().getSimpleName() + 
+               ": Height=" + height + 
+               ", BaseArea=" + calcBaseArea() + 
+               ", Volume=" + calcVolume();
+    }
 	
 }
