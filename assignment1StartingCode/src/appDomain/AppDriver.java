@@ -1,9 +1,27 @@
-	package appDomain;
-	import utilities.BubbleSort;
-	import utilities.SelectionSort;
-	import utilities.InsertionSort;
-	import utilities.ShellSort;
+package appDomain;
+import utilities.BubbleSort;
+import utilities.SelectionSort;
+import utilities.InsertionSort;
+import utilities.ShellSort;
 	
+
+import utilities.*;
+
+import comparators.*;
+
+import shapes.*;
+import shapesAbstract.*;
+
+/**
+ * <p>
+ * This application driver code is designed to be used as a basis for the
+ * Complexity and Sorting assignment that will be developed in the CPRG304 
+ * F2025 class at SAIT. The implementors of this applications will be required
+ * to add all the correct functionality.
+ * </p>
+ */
+public class AppDriver
+{
 	/**
 	 * <p>
 	 * This application driver code is designed to be used as a basis for the
