@@ -1,6 +1,6 @@
 package shapes;
 
-import ShapesAbstract.Shape;
+import shapesAbstract.Shape;
 
 public class Cylinder extends Shape
 {

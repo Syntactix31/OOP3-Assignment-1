@@ -1,6 +1,11 @@
 package appDomain;
-import utilities.BubbleSort;
-import utilities.SelectionSort;
+
+import utilities.*;
+
+import comparators.*;
+
+import shapes.*;
+import shapesAbstract.*;
 
 /**
  * <p>
@@ -17,6 +22,7 @@ public class AppDriver
 	 *  
 	 *  @param args The input to control the execution of the application.
 	 */
+
 	public static void main( String[] args )
 	{
 		// TODO Auto-generated method stub
@@ -32,23 +38,29 @@ public class AppDriver
 		long start, stop;
 		
 		start = System.currentTimeMillis();
-        BubbleSort sortArray = new BubbleSort();
         
-        double[] testArray = {15.445, 8.234, 5.679, 5.78, 11.3};
+        Shape[] shapes = {
+                new Cone(10, 3),
+                new Cone(5, 5),
+                new Cone(8, 4)
+            };
         System.out.println("Original Array: ");
         
-        for (double val : testArray) {
+        for (Shape val : shapes) {
             System.out.println(val);
         }
         
         System.out.println();
         
         System.out.println("Sorted Array: ");
-        sortArray.sort(testArray);
+        BubbleSort.sort(shapes, new BaseAreaComparator());
         
-        for (double numbers : testArray) {
+        for (Shape numbers : shapes) {
             System.out.println(numbers);
         }
+        
+//      Non formatted output:  System.out.println(Arrays.toString(testArray));
+        
         
 		stop = System.currentTimeMillis();
 		System.out.println( "Alotted time for Bubble Sort was: " + ( stop - start ) + " milliseconds" );
@@ -57,21 +69,25 @@ public class AppDriver
 		
 		// Selection Sort Benchmarking (Replace test array with array from file read parse)
 		start = System.currentTimeMillis();
-        SelectionSort newArray = new SelectionSort();
         
-        double[] testArray2 = {15.445, 8.234, 5.679, 5.78, 11.3, 8.234};
+        
+        Shape[] shapes2 = {
+                new Cone(10, 3),
+                new Cone(5, 5),
+                new Cone(8, 4)
+            };
         System.out.println("Original Array: ");
         
-        for (double val : testArray2) {
+        for (Shape val : shapes2) {
             System.out.println(val);
         }
         
         System.out.println();
         
         System.out.println("Sorted Array: ");
-        newArray.sort(testArray2);
+        SelectionSort.sort(shapes2, new VolumeComparator());
         
-        for (double numbers : testArray2) {
+        for (Shape numbers : shapes2) {
             System.out.println(numbers);
         }
         
