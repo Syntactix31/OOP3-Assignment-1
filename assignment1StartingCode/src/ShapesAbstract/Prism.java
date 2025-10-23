@@ -1,10 +1,11 @@
 /**
  * 
  */
-package ShapesAbstract;
+package shapesAbstract;
+
 
 /**
- * 
+ * Jiro do this comparator
  */
 public abstract class Prism {
 	
@@ -29,6 +30,8 @@ public abstract class Prism {
 		this.height = height;
 		this.side = side;
 	}
+	
+	
 	
 	
 }
