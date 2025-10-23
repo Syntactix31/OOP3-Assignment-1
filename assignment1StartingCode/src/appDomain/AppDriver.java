@@ -81,7 +81,7 @@ public class AppDriver
         
         
 		stop = System.currentTimeMillis();
-		System.out.println( "Alotted time for Bubble Sort was: " + ( stop - start ) + " milliseconds" );
+		System.out.println( "\nAlotted time for Bubble Sort was: " + ( stop - start ) + " milliseconds\n" );
 		System.out.println();
 		
 		
@@ -89,93 +89,93 @@ public class AppDriver
 		start = System.currentTimeMillis();
         
         
-        Shape[] shapes2 = {
-                new Cone(10, 3),
-                new Cone(5, 5),
-                new Cone(8, 4)
-            };
+//        Shape[] shapes = {
+//                new Cone(10, 3),
+//                new Cone(5, 5),
+//                new Cone(8, 4)
+//            };
         System.out.println("Original Array: ");
         
-        for (Shape val : shapes2) {
+        for (Shape val : shapes) {
             System.out.println(val);
         }
         
         System.out.println();
         
         System.out.println("Sorted Array: ");
-        SelectionSort.sort(shapes2, new VolumeComparator());
+        SelectionSort.sort(shapes, new VolumeComparator());
         
-        for (Shape numbers : shapes2) {
+        for (Shape numbers : shapes) {
             System.out.println(numbers);
         }
         
         stop = System.currentTimeMillis();
-		System.out.println( "Alotted time for Selection Sort was: " + ( stop - start ) + " milliseconds" );
+		System.out.println( "\nAlotted time for Selection Sort was: " + ( stop - start ) + " milliseconds\n" );
 		System.out.println();
 		
 		//Merge Sort (Replace shapesM with parsed array from the file)
 		start = System.currentTimeMillis();
 
-		Shape[] shapesM = {
-		    new Cone(10, 3),
-		    new Cone(5, 5),
-		    new Cone(8, 4)
-		};
+//		Shape[] shapes = {
+//		    new Cone(10, 3),
+//		    new Cone(5, 5),
+//		    new Cone(8, 4)
+//		};
 
 		System.out.println("Original Array: ");
-		for (Shape s : shapesM) System.out.println(s);
+		for (Shape s : shapes) System.out.println(s);
 
 		// DESCENDING by base area (as an example)
-		utilities.MergeSort.sort(shapesM, new BaseAreaComparator().reversed());
+		utilities.MergeSort.sort(shapes, new BaseAreaComparator().reversed());
 
 		System.out.println();
 		System.out.println("Sorted Array (DESC): ");
-		for (Shape s : shapesM) System.out.println(s);
+		for (Shape s : shapes) System.out.println(s);
 
 		stop = System.currentTimeMillis();
-		System.out.println("Alotted time for Merge Sort was: " + (stop - start) + " milliseconds");
+		System.out.println("\nAlotted time for Merge Sort was: " + (stop - start) + " milliseconds\n");
 		System.out.println();
 		
 		// Insertion Sort Benchmarking (Replace shapesI with array from file read parse)
 		start = System.currentTimeMillis();
-        Shape[] shapes4 = { new Cone(10, 3), new Cone(5, 5), new Cone(8, 4) };
+//        Shape[] shapes = { new Cone(10, 3), new Cone(5, 5), new Cone(8, 4) };
         System.out.println("Original Array: ");
-        for (Shape val : shapes4) {
+        for (Shape val : shapes) {
             System.out.println(val);
         }
         System.out.println();
 
         System.out.println("Sorted Array: ");
-        InsertionSort.sort(shapes4, new BaseAreaComparator());
-        for (Shape s : shapes4) {
+        InsertionSort.sort(shapes, new BaseAreaComparator());
+        for (Shape s : shapes) {
             System.out.println(s);
         }
 
         stop = System.currentTimeMillis();
-        System.out.println("Alotted time for Insertion Sort was: " + (stop - start) + " milliseconds");
+        System.out.println("\nAlotted time for Insertion Sort was: " + (stop - start) + " milliseconds\n");
         System.out.println();
 
 
         // Shell Sort Benchmarking (Replace shapesS with array from file read parse)
         start = System.currentTimeMillis();
-        Shape[] shapes5 = { new Cone(10, 3), new Cone(5, 5), new Cone(8, 4) };
+//        Shape[] shapes = { new Cone(10, 3), new Cone(5, 5), new Cone(8, 4) };
         System.out.println("Original Array: ");
-        for (Shape val : shapes5) {
+        for (Shape val : shapes) {
             System.out.println(val);
         }
         System.out.println();
 
         System.out.println("Sorted Array: ");
-        ShellSort.sort(shapes5, new VolumeComparator());
-        for (Shape s : shapes5) {
+        ShellSort.sort(shapes, new VolumeComparator());
+        for (Shape s : shapes) {
             System.out.println(s);
         }
 
         stop = System.currentTimeMillis();
-        System.out.println("Alotted time for Shell Sort was: " + (stop - start) + " milliseconds");
+        System.out.println("\nAlotted time for Shell Sort was: " + (stop - start) + " milliseconds\n");
         System.out.println();
         
-        //Quicksort Testing
+        //Quick Sort Testing
         start = System.currentTimeMillis();
         
         System.out.println("Original Array: ");
@@ -191,7 +191,7 @@ public class AppDriver
 		}
 
 		stop = System.currentTimeMillis();
-		System.out.println("Alotted time for Quick Sort was: " + (stop - start) + " milliseconds");
+		System.out.println("\nAlotted time for Quick Sort was: " + (stop - start) + " milliseconds\n");
 		System.out.println();
         
         
