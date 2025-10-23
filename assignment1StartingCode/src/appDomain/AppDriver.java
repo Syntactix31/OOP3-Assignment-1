@@ -2,11 +2,15 @@ package appDomain;
 
 import utilities.*;
 
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.Arrays;
+
 import comparators.*;
 
 import shapes.*;
 import shapesAbstract.*;
-
+import utilities.ShapeFileReader;
 /**
  * <p>
  * This application driver code is designed to be used as a basis for the
@@ -21,9 +25,10 @@ public class AppDriver
 	 *  The main method is the entry point of the application.
 	 *  
 	 *  @param args The input to control the execution of the application.
+	 * @throws IOException 
 	 */
 
-	public static void main( String[] args )
+	public static void main( String[] args ) throws IOException
 	{
 		// TODO Auto-generated method stub
 
@@ -36,14 +41,27 @@ public class AppDriver
 		
 		// Bubble Sort Benchmarking (Replace test array with array from file read parse)
 		long start, stop;
+		Shape[] shapes = null;
+		
+		// Parse command line arguments -- This works, just commented out for testing until file is ready
+//		for (String arg : args) {
+//			arg = arg.toLowerCase();
+//			
+//			if (arg.startsWith("-f")) {
+//				String fileName = arg.substring(2);
+//				shapes = ShapeFileReader.readShapesFromFile(Paths.get("res", fileName));
+//			}
+////			else if (arg.startsWith("-t")) { } type
+////			else if (arg.startsWith("-s")) { } sort method
+////			Also need to add error handling for invalid or missing args
+//		}
+		
+		shapes = ShapeFileReader.readShapesFromFile(Paths.get("res", "shapes2.txt")); // Temporary hardcoded file read for testing
 		
 		start = System.currentTimeMillis();
         
-        Shape[] shapes = {
-                new Cone(10, 3),
-                new Cone(5, 5),
-                new Cone(8, 4)
-            };
+
+		
         System.out.println("Original Array: ");
         
         for (Shape val : shapes) {
