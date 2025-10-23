@@ -9,7 +9,6 @@ package shapesAbstract;
  */
 public abstract class Prism extends Shape {
 	
-	public double height;
 	public double side;
 	public abstract double calcVolume();
 	public abstract double calcBaseArea();
@@ -26,7 +25,6 @@ public abstract class Prism extends Shape {
 	
 	
 	public Prism(double height, double side) {
-		// TODO Auto-generated constructor stub
 		super(height);
 		this.side = side;
 		

@@ -5,20 +5,18 @@ import shapesAbstract.Prism;
 public class TriangularPrism extends Prism
 {
 
-	public TriangularPrism(double height, double radiusOrEdge) {
-		super(height, radiusOrEdge);
+	public TriangularPrism(double height, double side) {
+		super(height, side);
 	}
 
 	@Override
 	public double calcVolume() {
-		// TODO Auto-generated method stub
-		return 0;
+		return calcBaseArea() * height;
 	}
 
 	@Override
 	public double calcBaseArea() {
-		// TODO Auto-generated method stub
-		return 0;
+		return (Math.sqrt(3) / 4.0) * side * side;
 	}
 
 }

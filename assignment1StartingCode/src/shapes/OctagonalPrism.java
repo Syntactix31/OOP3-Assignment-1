@@ -5,21 +5,19 @@ import shapesAbstract.Prism;
 public class OctagonalPrism extends Prism
 {
 
-	public OctagonalPrism(double height, double radiusOrEdge) {
-		super(height, radiusOrEdge);
+	public OctagonalPrism(double height, double side) {
+		super(height, side);
 		
 	}
 
 	@Override
 	public double calcVolume() {
-		// TODO Auto-generated method stub
-		return 0;
+		return calcBaseArea() * height;
 	}
 
 	@Override
 	public double calcBaseArea() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 2 * (1 + Math.sqrt(2)) * side * side;
 	}
 
 }

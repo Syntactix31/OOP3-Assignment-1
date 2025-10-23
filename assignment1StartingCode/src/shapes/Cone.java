@@ -9,7 +9,6 @@ public class Cone extends Shape
 	
 	public Cone(double height, double radius) {
 		super(height);
-		// TODO Auto-generated constructor stub
 		this.radius = radius;
 	}	
 	

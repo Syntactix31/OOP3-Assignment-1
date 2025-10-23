@@ -7,9 +7,9 @@ public class Cylinder extends Shape
 	
 	public double radius;
 	
-	public Cylinder(double height, double radiusOrEdge) {
+	public Cylinder(double height, double radius) {
 		super(height);
-		// TODO Auto-generated constructor stub
+		this.radius = radius;
 	}	
 	
 	
@@ -21,15 +21,13 @@ public class Cylinder extends Shape
 
 	@Override
 	public double calcVolume() {
-		// TODO Auto-generated method stub
-		return 0;
+		return Math.PI * (radius * radius) * height;
 	}
 
 
 	@Override
 	public double calcBaseArea() {
-		// TODO Auto-generated method stub
-		return 0;
+		return Math.PI * (radius * radius);
 	}
 
 }

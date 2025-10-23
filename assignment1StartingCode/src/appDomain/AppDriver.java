@@ -56,7 +56,7 @@ public class AppDriver
 ////			Also need to add error handling for invalid or missing args
 //		}
 		
-		shapes = ShapeFileReader.readShapesFromFile(Paths.get("res", "shapes2.txt")); // Temporary hardcoded file read for testing
+		shapes = ShapeFileReader.readShapesFromFile(Paths.get("res", "shapes1.txt")); // Temporary hardcoded file read for testing
 		
 		start = System.currentTimeMillis();
         
@@ -174,6 +174,25 @@ public class AppDriver
         stop = System.currentTimeMillis();
         System.out.println("Alotted time for Shell Sort was: " + (stop - start) + " milliseconds");
         System.out.println();
+        
+        //Quicksort Testing
+        start = System.currentTimeMillis();
+        
+        System.out.println("Original Array: ");
+        for (Shape val : shapes) {
+			System.out.println(val);
+		}
+        System.out.println();
+
+		System.out.println("Sorted Array: ");
+		QuickSort.sort(shapes, new BaseAreaComparator());
+		for (Shape s : shapes) {
+			System.out.println(s);
+		}
+
+		stop = System.currentTimeMillis();
+		System.out.println("Alotted time for Quick Sort was: " + (stop - start) + " milliseconds");
+		System.out.println();
         
         
 		// refer to demo02 Student.java for comparable implementation, and

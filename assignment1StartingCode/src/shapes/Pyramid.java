@@ -5,20 +5,18 @@ import shapesAbstract.Prism;
 public class Pyramid extends Prism
 {
 
-	public Pyramid(double height, double radiusOrEdge) {
-		super(height, radiusOrEdge);
+	public Pyramid(double height, double side) {
+		super(height, side);
 	}
 
 	@Override
 	public double calcVolume() {
-		// TODO Auto-generated method stub
-		return 0;
+		return (1.0 / 3.0) * calcBaseArea() * height;
 	}
 
 	@Override
 	public double calcBaseArea() {
-		// TODO Auto-generated method stub
-		return 0;
+		return side * side;
 	}
 
 }
