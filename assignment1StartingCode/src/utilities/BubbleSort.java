@@ -35,28 +35,6 @@ public class BubbleSort {
 		testArray[index2] = temp;
 	}
 		
-
-	// Got rid of this
-//    public static void main(String[] args) {       
-//        Shape[] shapes = {
-//                new Cone(10, 3),
-//                new Cone(5, 5),
-//                new Cone(8, 4)
-//            };
-//        System.out.println("Original Array: ");
-//        
-//        for (Shape val : shapes) {
-//            System.out.println(val);
-//        }
-//        
-//        System.out.println();
-//        
-//        System.out.println("Sorted Array: ");
-//        BubbleSort.sort(shapes, new VolumeComparator());
-//        
-//        for (Shape numbers : shapes) {
-//            System.out.println(numbers);
-//        }
         
 //      Non formatted output:  System.out.println(Arrays.toString(testArray));
         

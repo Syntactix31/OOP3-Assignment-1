@@ -38,30 +38,6 @@ public class SelectionSort {
 		array[index2] = temp;
 		
 	}
-	
-	
-	// Got rid of this
-//    public static void main(String[] args) {
-//        SelectionSort sortArray = new SelectionSort();
-//        
-//        double[] testArray = {15.445, 8.234, 5.679, 5.78, 11.3, 8.234};
-//        System.out.println("Original Array: ");
-//        
-//        for (double val : testArray) {
-//            System.out.println(val);
-//        }
-//        
-//        System.out.println();
-//        
-//        System.out.println("Sorted Array: ");
-//        sortArray.sort(testArray);
-//        
-//        for (double numbers : testArray) {
-//            System.out.println(numbers);
-//        }
-//    }
-    
-
 
 }
 
