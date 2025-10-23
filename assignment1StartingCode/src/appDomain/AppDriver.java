@@ -117,6 +117,46 @@ public class AppDriver
 		stop = System.currentTimeMillis();
 		System.out.println("Alotted time for Merge Sort was: " + (stop - start) + " milliseconds");
 		System.out.println();
+		
+		// Insertion Sort Benchmarking (Replace shapesI with array from file read parse)
+		start = System.currentTimeMillis();
+        Shape[] shapes4 = { new Cone(10, 3), new Cone(5, 5), new Cone(8, 4) };
+        System.out.println("Original Array: ");
+        for (Shape val : shapes4) {
+            System.out.println(val);
+        }
+        System.out.println();
+
+        System.out.println("Sorted Array: ");
+        InsertionSort.sort(shapes4, new BaseAreaComparator());
+        for (Shape s : shapes4) {
+            System.out.println(s);
+        }
+
+        stop = System.currentTimeMillis();
+        System.out.println("Alotted time for Insertion Sort was: " + (stop - start) + " milliseconds");
+        System.out.println();
+
+
+        // Shell Sort Benchmarking (Replace shapesS with array from file read parse)
+        start = System.currentTimeMillis();
+        Shape[] shapes5 = { new Cone(10, 3), new Cone(5, 5), new Cone(8, 4) };
+        System.out.println("Original Array: ");
+        for (Shape val : shapes5) {
+            System.out.println(val);
+        }
+        System.out.println();
+
+        System.out.println("Sorted Array: ");
+        ShellSort.sort(shapes5, new VolumeComparator());
+        for (Shape s : shapes5) {
+            System.out.println(s);
+        }
+
+        stop = System.currentTimeMillis();
+        System.out.println("Alotted time for Shell Sort was: " + (stop - start) + " milliseconds");
+        System.out.println();
+        
         
 		// refer to demo02 Student.java for comparable implementation, and
 		// NameCompare.java or GradeCompare for comparator implementations
