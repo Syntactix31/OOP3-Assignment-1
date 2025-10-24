@@ -114,7 +114,7 @@ public class AppDriver
 		
 	 // Merge Sort Benchmarking
 		start = System.currentTimeMillis();
-		utilities.MergeSort.sort(shapes, new BaseAreaComparator().reversed());
+		utilities.MergeSort.sort(shapes, new BaseAreaComparator().reversed());	// THEO FIX TS
 		stop = System.currentTimeMillis();
 		
 		System.out.println();
