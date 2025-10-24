@@ -56,7 +56,7 @@ public class AppDriver
 ////			Also need to add error handling for invalid or missing args
 //		}
 		
-		shapes = ShapeFileReader.readShapesFromFile(Paths.get("res", "shapes2.txt")); // Temporary hard-coded file read for testing
+		shapes = ShapeFileReader.readShapesFromFile(Paths.get("res", "shapes1.txt")); // Temporary hard-coded file read for testing
         
 
 		// Bubble Sort Algorithm
