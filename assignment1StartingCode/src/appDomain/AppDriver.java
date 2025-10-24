@@ -30,26 +30,17 @@ public class AppDriver
 	 */
 
 	public static void main( String[] args ) throws IOException
-	{
-		// TODO Auto-generated method stub
-
-		// refer to demo00 BasicFileIO.java for a simple example on how to
-		// read data from a text file
-
-		// refer to demo01 Test.java for an example on how to parse command
-		// line arguments and benchmarking tests
-		
-		
+	{	
 		// Benchmarking variables initialization
 		long start, stop;
 		
 		// Command line arguments parsing
 		String filePath = null;
 		Character compareKey = null; // 'h', 'v', 'a'
-		Character sortKey = null;    // 'b','s','i','m','q','z' 
+		Character sortKey = null; // 'b','s','i','m','q','z' 
 
 		for (String arg : args) {
-			
+			// Continue if argument is too short or doesn't start with '-'
 		    if (arg.length() < 2 || arg.charAt(0) != '-') continue;
 
 		    char flag = Character.toLowerCase(arg.charAt(1));
@@ -73,7 +64,7 @@ public class AppDriver
 		            	System.err.println("Use -sb, -ss, -si, -sm, -sq, or -sz"); 
 		            	return; 
 		            }
-		            sortKey = argValue.charAt(0); // b/s/i/m/q/z
+		            sortKey = argValue.charAt(0);
 		            break;
 
 		        default:
@@ -83,9 +74,18 @@ public class AppDriver
 		}
 
 		// Validation of command line arguments
-		if (filePath == null) { System.err.println("Missing -f<file>. Example: -fres/shapes1.txt"); return; }
-		if (compareKey == null) { System.err.println("Missing -t<h|v|a>. Example: -tv"); return; }
-		if (sortKey == null) { System.err.println("Missing -s<b|s|i|m|q|z>. Example: -sq"); return; }
+		if (filePath == null) { 
+			System.err.println("Missing file arg: Example: -fshapes1.txt"); 
+			return; 
+		}
+		if (compareKey == null) { 
+			System.err.println("Missing type arg: -t<h|v|a>. Example: -tv"); 
+			return; 
+		}
+		if (sortKey == null) { 
+			System.err.println("Missing sort arg: -s<b|s|i|m|q|z> Example: -sq"); 
+			return; 
+		}
 
 		// Load shapes
 		Shape[] shapes = ShapeFileReader.readShapesFromFile(Paths.get("res", filePath));
