@@ -39,7 +39,7 @@ public class AppDriver
 		// line arguments and benchmarking tests
 		
 		
-		// Bubble Sort Benchmarking (Replace test array with array from file read parse)
+		// Benchmarking variables initialization
 		long start, stop;
 		Shape[] shapes = null;
 		
@@ -56,12 +56,10 @@ public class AppDriver
 ////			Also need to add error handling for invalid or missing args
 //		}
 		
-		shapes = ShapeFileReader.readShapesFromFile(Paths.get("res", "shapes1.txt")); // Temporary hardcoded file read for testing
-		
-		start = System.currentTimeMillis();
+		shapes = ShapeFileReader.readShapesFromFile(Paths.get("res", "shapes2.txt")); // Temporary hard-coded file read for testing
         
 
-		
+		// Bubble Sort Algorithm
         System.out.println("Original Array: ");
         
         for (Shape val : shapes) {
@@ -70,30 +68,24 @@ public class AppDriver
         
         System.out.println();
         
+        
         System.out.println("Sorted Array: ");
+        
+     // Bubble Sort Benchmarking
+        start = System.currentTimeMillis();
         BubbleSort.sort(shapes, new BaseAreaComparator());
+        stop = System.currentTimeMillis();
+        
         
         for (Shape numbers : shapes) {
             System.out.println(numbers);
         }
         
-//      Non formatted output:  System.out.println(Arrays.toString(testArray));
-        
-        
-		stop = System.currentTimeMillis();
 		System.out.println( "\nAlotted time for Bubble Sort was: " + ( stop - start ) + " milliseconds\n" );
 		System.out.println();
 		
 		
-		// Selection Sort Benchmarking (Replace test array with array from file read parse)
-		start = System.currentTimeMillis();
-        
-        
-//        Shape[] shapes = {
-//                new Cone(10, 3),
-//                new Cone(5, 5),
-//                new Cone(8, 4)
-//            };
+		// Selection Sort Algorithm
         System.out.println("Original Array: ");
         
         for (Shape val : shapes) {
@@ -103,42 +95,37 @@ public class AppDriver
         System.out.println();
         
         System.out.println("Sorted Array: ");
+        
+     // Selection Sort Benchmarking
+        start = System.currentTimeMillis();
         SelectionSort.sort(shapes, new VolumeComparator());
+        stop = System.currentTimeMillis();
         
         for (Shape numbers : shapes) {
             System.out.println(numbers);
-        }
-        
-        stop = System.currentTimeMillis();
+        } 
 		System.out.println( "\nAlotted time for Selection Sort was: " + ( stop - start ) + " milliseconds\n" );
 		System.out.println();
 		
-		//Merge Sort (Replace shapesM with parsed array from the file)
-		start = System.currentTimeMillis();
-
-//		Shape[] shapes = {
-//		    new Cone(10, 3),
-//		    new Cone(5, 5),
-//		    new Cone(8, 4)
-//		};
-
+		
+		// Merge Sort ALgorithm
 		System.out.println("Original Array: ");
 		for (Shape s : shapes) System.out.println(s);
-
-		// DESCENDING by base area (as an example)
+		
+	 // Merge Sort Benchmarking
+		start = System.currentTimeMillis();
 		utilities.MergeSort.sort(shapes, new BaseAreaComparator().reversed());
-
+		stop = System.currentTimeMillis();
+		
 		System.out.println();
 		System.out.println("Sorted Array (DESC): ");
 		for (Shape s : shapes) System.out.println(s);
 
-		stop = System.currentTimeMillis();
 		System.out.println("\nAlotted time for Merge Sort was: " + (stop - start) + " milliseconds\n");
 		System.out.println();
 		
-		// Insertion Sort Benchmarking (Replace shapesI with array from file read parse)
-		start = System.currentTimeMillis();
-//        Shape[] shapes = { new Cone(10, 3), new Cone(5, 5), new Cone(8, 4) };
+		
+		// Insertion Sort Algorithm
         System.out.println("Original Array: ");
         for (Shape val : shapes) {
             System.out.println(val);
@@ -146,19 +133,20 @@ public class AppDriver
         System.out.println();
 
         System.out.println("Sorted Array: ");
+        
+     // Insertion Sort Benchmarking
+        start = System.currentTimeMillis();
         InsertionSort.sort(shapes, new BaseAreaComparator());
+        stop = System.currentTimeMillis();
+        
         for (Shape s : shapes) {
             System.out.println(s);
         }
-
-        stop = System.currentTimeMillis();
         System.out.println("\nAlotted time for Insertion Sort was: " + (stop - start) + " milliseconds\n");
         System.out.println();
+        
 
-
-        // Shell Sort Benchmarking (Replace shapesS with array from file read parse)
-        start = System.currentTimeMillis();
-//        Shape[] shapes = { new Cone(10, 3), new Cone(5, 5), new Cone(8, 4) };
+        //	Shell Sort Algorithm
         System.out.println("Original Array: ");
         for (Shape val : shapes) {
             System.out.println(val);
@@ -166,18 +154,20 @@ public class AppDriver
         System.out.println();
 
         System.out.println("Sorted Array: ");
+        
+     // Shell Sort Benchmarking
+        start = System.currentTimeMillis();
         ShellSort.sort(shapes, new VolumeComparator());
+        stop = System.currentTimeMillis();
+        
         for (Shape s : shapes) {
             System.out.println(s);
         }
-
-        stop = System.currentTimeMillis();
         System.out.println("\nAlotted time for Shell Sort was: " + (stop - start) + " milliseconds\n");
         System.out.println();
         
-        //Quick Sort Testing
-        start = System.currentTimeMillis();
         
+        // Quick Sort Algorithm
         System.out.println("Original Array: ");
         for (Shape val : shapes) {
 			System.out.println(val);
@@ -185,12 +175,15 @@ public class AppDriver
         System.out.println();
 
 		System.out.println("Sorted Array: ");
+		
+     // Quick Sort Benchmarking
+		start = System.currentTimeMillis();
 		QuickSort.sort(shapes, new BaseAreaComparator());
+		stop = System.currentTimeMillis();
+		
 		for (Shape s : shapes) {
 			System.out.println(s);
 		}
-
-		stop = System.currentTimeMillis();
 		System.out.println("\nAlotted time for Quick Sort was: " + (stop - start) + " milliseconds\n");
 		System.out.println();
         
