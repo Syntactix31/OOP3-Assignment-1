@@ -3,15 +3,15 @@ package utilities;
 import java.util.Comparator;
 
 /**
- * Stable top-down Merge Sort (DESCENDING order).
- * - Pass a normal (ascending) comparator; the algorithm arranges elements
- *   from largest to smallest internally.
- * - No printing or timing here.
+ * SelectionSort.java
  *
- * Examples:
- *   MergeSort.sort(arr, new BaseAreaComparator());  // DESC by base area
- *   MergeSort.sort(arr, new VolumeComparator());    // DESC by volume
- *   MergeSort.sort(arr);                            // DESC by natural order
+ * @author Theo Sanchez
+ * @version 1.8 
+ * 
+ * Class Definition: Demonstrates a Merge Sort algorithm using the Comparator interface.
+ *                   Works generically over reference types and orders elements strictly
+ *                   according to the provided Comparator (or natural order when applicable).
+ * 
  */
 public final class MergeSort {
     private MergeSort() {}
